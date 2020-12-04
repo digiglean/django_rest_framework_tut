@@ -24,10 +24,10 @@ class IsIndy(BasePermission):
 
 class BookViewSet(viewsets.ModelViewSet):
     serializer_class = BookSerializer
-    permission_classes = [IsIndy | IsSuperUser]
-    #permission_classes = [IsSuperUser]
-    #permission_classes = [IsAdminUser]
-    #permission_classes = [IsAuthenticated]
+    # permission_classes = [IsIndy | IsSuperUser]
+    # permission_classes = [IsSuperUser]
+    # permission_classes = [IsAdminUser]
+    # permission_classes = [IsAuthenticated]
 
     def get_queryset(self):
         if self.request.user.is_staff:
